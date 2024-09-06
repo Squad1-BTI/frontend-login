@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'text-primary p-6 shadow-md bg-secundary hover:bg-primary hover:text-secundary',
+        default: 'text-white p-3 border-2 border-primary shadow-md bg-primary hover:bg-white hover:text-primary',
       },
       size: {
-        default: 'h-11 px-4 py-2',
-        sm: 'h-9 px-3',
-        lg: 'h-12 px-8',
+        default: 'w-96 text-xl',
+        sm: 'w-18 text-xl',
+        lg: 'w-54 text-xl',
         icon: 'h-10 w-10',
       },
       rounded: {
-        default: 'rounded-lg',
+        default: 'rounded-full',
         md: 'rounded-md',
         none: 'rounded-none',
       },

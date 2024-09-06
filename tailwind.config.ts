@@ -12,8 +12,10 @@ const config: Config = {
         sans: ["var(--font-roboto)"],
       },
       colors: {
-        primary: '#f76a00', // cor de texto
-        secundary: '#535353', // cor de botao
+        primary: '#f76a00', // cor padrão
+      },
+      height: {
+        '128': '64rem',
       },
     },
   },

@@ -6,13 +6,13 @@ export default function Home() {
     <main className="flex flex-col items-center h-full w-full justify-center">
       <h1 className="text-primary ">Hello World!</h1>
       <div>
-        <Button variant="default" size="sm" rounded="md">
+        <Button rounded="md">
           Delete
         </Button>
-        <Button variant="default" size="sm" rounded="md">
+        <Button size="sm" rounded="md">
           Cancel
         </Button>
-        <Button variant="default" size="sm" rounded="none">
+        <Button size="lg" rounded="none">
           Cancelado
         </Button>
       </div>
