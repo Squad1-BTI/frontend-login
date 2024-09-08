@@ -1,4 +1,4 @@
- export default  function Input() {
+ export default function Input() {
      return (
         
          <><div className="flex flex-col gap-2 " >
