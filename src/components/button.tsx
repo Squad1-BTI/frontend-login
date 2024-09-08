@@ -9,10 +9,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'text-white p-3 border-2 border-primary shadow-md bg-primary hover:bg-white hover:text-primary',
+        default: 'text-white p-3 border-2 border-primary bg-primary hover:bg-white hover:text-primary/90',
       },
       size: {
-        default: 'w-96 text-xl',
+        default: 'w-96 text-lg',
         sm: 'w-18 text-xl',
         lg: 'w-54 text-xl',
         icon: 'h-10 w-10',
