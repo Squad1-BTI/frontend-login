@@ -48,7 +48,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           className={cn(inputVariants({ variant, size, className }), togglePassword && 'pr-10')}
           ref={ref}
-          // Altera o tipo de input de 'password' para 'text' com base no estado showPassword
           type={togglePassword && showPassword ? 'password' : 'text'}
           {...props}
         />
