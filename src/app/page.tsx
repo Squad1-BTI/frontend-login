@@ -1,4 +1,4 @@
-import { Button } from '@/components/button';
+import { Button } from '@/components/UI/button';
 //import { cn } from "@/lib/utils";
 
 export default function Home() {
@@ -6,15 +6,7 @@ export default function Home() {
     <main className="flex flex-col items-center h-full w-full justify-center">
       <h1 className="text-primary ">Hello World!</h1>
       <div>
-        <Button rounded="md">
-          Delete
-        </Button>
-        <Button size="sm" rounded="md">
-          Cancel
-        </Button>
-        <Button size="lg" rounded="none">
-          Cancelado
-        </Button>
+        
       </div>
     </main>
   );

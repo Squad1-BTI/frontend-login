@@ -12,7 +12,7 @@ const config: Config = {
         sans: ["var(--font-roboto)"],
       },
       colors: {
-        primary: '#f76a00', // cor padrão
+        primary: '#f76a00',
       },
       height: {
         '128': '64rem',
