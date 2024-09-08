@@ -10,7 +10,7 @@ const inputVariants = cva(
   {
     variants: {
       variant: {
-        default: 'text-black peer block w-full border-2 px-3 py-2 focus:outline-none focus:ring-2',
+        default: 'text-gray-800 peer block w-full border-2 px-3 py-2 focus:outline-none focus:ring-2',
       },
       size: {
         default: 'w-96 text-lg',
@@ -57,9 +57,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             onClick={handleToggle}
           >
             {showPassword ? (
-              <EyeSlashIcon className="w-6 h-6 text-black"/>
+              <EyeSlashIcon className="w-6 h-6 text-gray-400"/>
             ) : (
-              <EyeIcon className="w-6 h-6 text-black"/>
+              <EyeIcon className="w-6 h-6 text-gray-400"/>
             )}
           </span>
         )}
