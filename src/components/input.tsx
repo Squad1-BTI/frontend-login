@@ -1,8 +1,8 @@
-"use client"; // Necessário para o uso de hooks no Next.js
+"use client";
 
 import * as React from 'react';
 import { cn } from '@/lib/utils';
-import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline'; // Import dos ícones
+import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { type VariantProps, cva } from 'class-variance-authority';
 
 const inputVariants = cva(
