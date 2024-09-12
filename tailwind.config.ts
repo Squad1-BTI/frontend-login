@@ -13,10 +13,13 @@ const config: Config = {
       },
       colors: {
         primary: '#f76a00',
+        secundary: '#F2EFEE',
+        place: '#838C9B'
       },
       height: {
         '128': '64rem',
       },
+      
     },
   },
   plugins: [],
