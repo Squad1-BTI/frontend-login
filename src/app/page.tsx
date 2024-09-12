@@ -5,8 +5,7 @@ export default function Home() {
     <main className="flex flex-col items-center h-full w-full justify-center">
       <h1 className="text-primary ">Hello World!</h1>
       <div>
-        <Input togglePassword={true} />
-        <Input />
+
       </div>
     </main>
   );
