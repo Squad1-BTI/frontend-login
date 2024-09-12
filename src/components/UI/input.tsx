@@ -12,31 +12,31 @@ const inputVariants = cva(
       variant: {
         default: 'text-gray-800 peer block w-full border-2 px-3 py-2 focus:outline-none focus:ring-2',
       },
-      size: {
+      inputSize: {
         default: 'w-96 text-lg',
         sm: 'w-18 text-xl',
         lg: 'w-54 text-xl',
       },
       rounded: {
-        default: 'rounded-full',
+        default: 'rounded-lg',
         md: 'rounded-md',
         none: 'rounded-none',
       },
     },
     defaultVariants: {
       variant: 'default',
-      size: 'default',
+      inputSize: 'default',
       rounded: 'default',
     },
   }
 );
 
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>, VariantProps<typeof inputVariants> {
+export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>, VariantProps<typeof inputVariants> {
   togglePassword?: boolean; // Habilita o modo de alternância de senha
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, variant, size, togglePassword = false, ...props }, ref) => {
+  ({ className, variant, inputSize, togglePassword = false, ...props }, ref) => {
     const [showPassword, setShowPassword] = React.useState(true); // Estado para controlar a exibição de senha
 
     const handleToggle = () => {
@@ -46,7 +46,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="relative flex items-center">
         <input
-          className={cn(inputVariants({ variant, size, className }), togglePassword && 'pr-10')}
+          className={cn(inputVariants({ variant, inputSize, className }), togglePassword && 'pr-10')}
           ref={ref}
           type={togglePassword && showPassword ? 'password' : 'text'}
           {...props}
@@ -69,10 +69,5 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 );
 
 Input.displayName = 'Input';
-
-/*
-<Input togglePassword={true} />
-<Input />
-*/
 
 export { Input, inputVariants };
