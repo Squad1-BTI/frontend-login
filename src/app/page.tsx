@@ -15,10 +15,12 @@ export default function Home() {
         <Input
           type="email"
           placeholder="Seu email"
+         
         />
         <Input
           type="password"
           placeholder="Sua senha"
+           togglePassword={true}
         />
       </div>
     </main>

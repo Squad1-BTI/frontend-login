@@ -32,15 +32,15 @@ const inputVariants = cva(
 );
 
 export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>, VariantProps<typeof inputVariants> {
-  togglePassword?: boolean; // Habilita o modo de alternância de senha
+  togglePassword?: boolean; 
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, variant, inputSize, togglePassword = false, ...props }, ref) => {
-    const [showPassword, setShowPassword] = React.useState(true); // Estado para controlar a exibição de senha
+  ({ className, variant, inputSize, togglePassword = false, type = 'text', ...props }, ref) => {
+    const [showPassword, setShowPassword] = React.useState(false); // Agora começa como 'false', ou seja, senha oculta
 
     const handleToggle = () => {
-      setShowPassword((prevState) => !prevState); // Alterna o estado de exibição
+      setShowPassword((prevState) => !prevState); 
     };
 
     return (
@@ -48,7 +48,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           className={cn(inputVariants({ variant, inputSize, className }), togglePassword && 'pr-10')}
           ref={ref}
-          type={togglePassword && showPassword ? 'password' : 'text'}
+          type={togglePassword && !showPassword ? 'password' : 'text'} // Alternância entre password e text
           {...props}
         />
         {togglePassword && (
@@ -57,9 +57,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             onClick={handleToggle}
           >
             {showPassword ? (
-              <EyeSlashIcon className="w-6 h-6 text-gray-400"/>
-            ) : (
               <EyeIcon className="w-6 h-6 text-gray-400"/>
+            ) : (
+              <EyeSlashIcon className="w-6 h-6 text-gray-400"/>
             )}
           </span>
         )}
