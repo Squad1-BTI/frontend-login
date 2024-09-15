@@ -1,27 +1,20 @@
 import { Button } from '@/components/UI/button';
 import { Input } from '@/components/UI/input';
+import Login from './login';
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center h-full w-full justify-center">
-      <h1 className="text-primary">Hello World!</h1>
+      <h1 className="text-primary">Login</h1>
       <div>
-        <Button>
+        <Login />
+        {/* <Button>
           Delete
         </Button>
         <Button variant="default" size="sm">
-          Cancel
-        </Button>
-        <Input
-          type="email"
-          placeholder="Seu email"
-         
-        />
-        <Input
-          type="password"
-          placeholder="Sua senha"
-           togglePassword={true}
-        />
+          Entrar
+        </Button> */}
+       
       </div>
     </main>
   );
