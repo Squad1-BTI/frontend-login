@@ -13,7 +13,7 @@ const inputVariants = cva(
         default: 'text-gray-800 bg-secundary peer block w-full border-1 px-2 py-2 focus:outline-none placeholder:text-place  placeholder:text-sm ',
       },
       inputSize: {
-        default: 'w-96 text-lg',
+        default: 'min-w- text-lg',
         sm: 'w-18 text-xl',
         lg: 'w-54 text-xl',
       },
@@ -31,12 +31,12 @@ const inputVariants = cva(
   }
 );
 
-export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>, VariantProps<typeof inputVariants> {
+export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>{
   togglePassword?: boolean; 
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, variant, inputSize, togglePassword = false, type = 'text', ...props }, ref) => {
+  ({ className, togglePassword = false, type = 'text', ...props }, ref) => {
     const [showPassword, setShowPassword] = React.useState(false); 
 
     const handleToggle = () => {
@@ -44,9 +44,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     };
 
     return (
-      <div className="relative flex items-center m-4">
+      <div className="relative flex items-center m-4 w-full">
         <input
-          className={cn(inputVariants({ variant, inputSize, className }), togglePassword && 'pr-10')}
+          className={cn('min-w-[440px]:', className , togglePassword && 'pr-10')}
           ref={ref}
           type={togglePassword && !showPassword ? 'password' : 'text'}
           {...props}

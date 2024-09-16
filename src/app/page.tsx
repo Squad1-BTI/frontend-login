@@ -1,7 +1,9 @@
 import { Button } from '@/components/UI/button';
 import { Input } from '@/components/UI/input';
-import Login from './login';
-import HomePage from './HomePage';
+
+
+import Login from './login/login';
+import Page from './home/page';
 
 
 export default function Home() {
@@ -18,7 +20,7 @@ export default function Home() {
         <Button variant="default" size="sm">
           Entrar
         </Button> */}
-        <HomePage />
+        <Page />
       </div>
     </main>
   );

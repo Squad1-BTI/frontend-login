@@ -1,16 +1,16 @@
       "use client"
       import { Button } from "@/components/UI/button";
       import { Input } from "@/components/UI/input";
-      // import { useRouter } from "next/router";
+      import { useRouter } from "next/navigation";
 
     
    
   
 function Login() {
-          // const router = useRouter();
+           const router = useRouter();
           const handleSubmit = (e: { preventDefault: () => void; }) => {
               e.preventDefault();
-            // router.push('/Home');
+           router.push('/home');
           };
 
           return (
@@ -20,7 +20,7 @@ function Login() {
                   <p className="text-textGray mb-6">Insira suas credenciais para acessar sua conta</p>
               <form onSubmit={handleSubmit} className="w-full max-w-sm">
                       <label className="font-bold" htmlFor="email">Email</label>
-                      <Input
+                      <Input 
                           type="email"
                           placeholder="Seu email"
                           className="mb-4"
