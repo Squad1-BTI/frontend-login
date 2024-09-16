@@ -1,12 +1,13 @@
       "use client"
       import { Button } from "@/components/UI/button";
       import { Input } from "@/components/UI/input";
-// import { useRouter } from "next/router";
+      // import { useRouter } from "next/router";
+
     
    
-
+  
 function Login() {
-  // const router = useRouter();
+          // const router = useRouter();
           const handleSubmit = (e: { preventDefault: () => void; }) => {
               e.preventDefault();
             // router.push('/Home');
@@ -14,7 +15,7 @@ function Login() {
 
           return (
             <div className="flex flex-col items-center h-screen w-full justify-center px-4">
-              <img className="w-auto" src="/images/logo.svg" alt="Logo" />
+              <img className="w-1/5" src="/images/logo.svg" alt="Logo" />
                   <h1 className="text-4xl font-bold mb-4">Login</h1>
                   <p className="text-textGray mb-6">Insira suas credenciais para acessar sua conta</p>
               <form onSubmit={handleSubmit} className="w-full max-w-sm">
