@@ -11,7 +11,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'text-white p-6 border-2 shadow-md rounded-lg bg-blue-500 hover:bg-blue-700 hover:shadow-cyan-300',
+        default: 'p-6 border-2 shadow-md rounded-lg  hover:bg-primary hover:shadow-cyan-300',
       },
       size: {
         default: 'h-11 px-4 py-2',

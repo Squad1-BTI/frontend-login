@@ -14,7 +14,10 @@ const config: Config = {
       colors: {
         primary: '#f76a00',
         secundary: '#F2EFEE',
-        place: '#838C9B'
+        place: '#838C9B',
+        textGray: '#6A7686',
+        line: '#CDD0D5',
+        inputColor: "#F9FAFB"
       },
       height: {
         '128': '64rem',
