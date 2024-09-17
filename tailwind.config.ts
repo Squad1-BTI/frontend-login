@@ -16,7 +16,8 @@ const config: Config = {
         secundary: '#F2EFEE',
         place: '#838C9B',
         textGray: '#6A7686',
-        line: '#CDD0D5'
+        line: '#CDD0D5',
+        inputColor: "#F9FAFB"
       },
       height: {
         '128': '64rem',

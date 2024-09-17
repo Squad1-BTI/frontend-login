@@ -10,12 +10,12 @@ function Login() {
            const router = useRouter();
           const handleSubmit = (e: { preventDefault: () => void; }) => {
               e.preventDefault();
-           router.push('/home');
+           router.push('/');
           };
 
           return (
             <div className="flex flex-col items-center h-screen w-full justify-center space-y-4 px-4">
-              <img className="w-96 " src="/images/logo.svg" alt="Logo" />
+              <img className="w-auto " src="/images/logo.svg" alt="Logo" />
                   <h1 className="text-4xl font-bold mb-4">Login</h1>
                   <p className="text-textGray mb-6">Insira suas credenciais para acessar sua conta</p>
               <form onSubmit={handleSubmit} className="w-full max-w-sm">
