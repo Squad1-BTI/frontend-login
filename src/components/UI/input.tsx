@@ -30,7 +30,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             onClick={handleToggle}
           >
             {showPassword ? (
-              <EyeIcon className="w-5  text-place" />
+              <EyeIcon className="w-5 font-bold text-place" />
             ) : (
               <EyeSlashIcon className="w-5  h-5 text-place" />
             )}
