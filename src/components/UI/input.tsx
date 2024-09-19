@@ -44,7 +44,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     };
 
     return (
-      <div className="relative flex items-center m-4">
+      <div className="relative flex items-center">
         <input
           className={cn(inputVariants({ variant, inputSize, className }), togglePassword && 'pr-10')}
           ref={ref}
