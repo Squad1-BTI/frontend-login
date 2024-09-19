@@ -2,49 +2,49 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
-import { Slot } from '@radix-ui/react-slot';
-
 import { type VariantProps, cva } from 'class-variance-authority';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
-        default: 'text-white p-6 border-2 shadow-md rounded-lg bg-blue-500 hover:bg-blue-700 hover:shadow-cyan-300',
+        default: 'text-white p-3 border-2 border-primary bg-primary hover:bg-white hover:text-primary/90',
       },
       size: {
-        default: 'h-11 px-4 py-2',
-        sm: 'h-9 rounded-md px-3',
-        lg: 'h-12 rounded-md px-8',
+        default: 'w-96 text-lg',
+        sm: 'w-18 text-xl',
+        lg: 'w-54 text-xl',
         icon: 'h-10 w-10',
+      },
+      rounded: {
+        default: 'rounded-full',
+        md: 'rounded-md',
+        none: 'rounded-none',
       },
     },
     defaultVariants: {
       variant: 'default',
       size: 'default',
+      rounded: 'default',
     },
   }
 );
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
-}
+    VariantProps<typeof buttonVariants> {}
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : 'button';
+  ({ className, variant, size, ...props }, ref) => {
     return (
-      <Comp
+      <button
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
-        {...props}
-      />
+        {...props}>
+      </button>
     );
   }
 );
-Button.displayName = 'Button';
 
 export { Button, buttonVariants };
