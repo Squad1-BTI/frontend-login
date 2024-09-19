@@ -10,7 +10,7 @@ const inputVariants = cva(
   {
     variants: {
       variant: {
-        default: 'text-gray-800 bg-secundary peer block w-full border-1 px-2 py-2 focus:outline-none placeholder:text-place  placeholder:text-sm ',
+        default: 'text-gray-800 bg-gray-50 peer block w-full border-1 px-2 py-2 focus:outline-none placeholder:text-place  placeholder:text-sm ',
       },
       inputSize: {
         default: 'w-96 text-lg',
@@ -44,7 +44,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     };
 
     return (
-      <div className="relative flex items-center m-4">
+      <div className="relative flex items-center">
         <input
           className={cn(inputVariants({ variant, inputSize, className }), togglePassword && 'pr-10')}
           ref={ref}
