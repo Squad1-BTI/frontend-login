@@ -11,9 +11,9 @@ function Register() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full justify-center space-y-4 px-4">
+    <div className="flex flex-col items-center w-full justify-center space-y-4 px-4 mt-20">
       <img className="min-w-[501px]" src="/images/seta.svg" alt="Logo" />
-        <h1 className="text-4xl font-bold mb-4">Login</h1>
+        <h1 className="text-4xl font-bold mb-4">Comece agora</h1>
         <p className="text-slate-500 mb-6">Crie sua conta</p>
       <form onSubmit={handleSubmit} className="w-full max-w-sm">
 
